@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+<div class="flash notice">
+	<span class=alert> <%= flash[:notice] %> </span>
+</div>
+<% end %>
+<h3>welcome back</h3>
+<br>
+<h3>@name </h3>
+<%= @name %>
+<br>
+<h3>@session </h3>
+<%= @session %>
+<br>
+<h3>@name </h3><%= @name %>
+<br>
+<a href="signout.erb">SignOut</a>
+<br>
+

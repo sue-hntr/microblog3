@@ -1,0 +1,42 @@
+body{
+	background-color: #F5FAE6;
+}
+
+
+h1{ 
+	font-family: "Magneto", serif;
+	font-style: oblique;
+	font-size: 4em;
+	color: #8AE65C;
+}
+
+h2{
+	font-family: "Courier", san-serif;
+	font-size: 2em;
+	color: #999966;
+}
+h3{
+	font-family: "Magneto";
+	font-style: oblique;
+	font-size: 1.8;
+	color: #8AE65C;
+
+}
+
+form{
+	font-family: "Arial", san-serif;
+	font-size: 1.2 em;
+}
+
+a{
+	font-family: "Arial", san-serif;
+	font-size: 1.5 em;
+	color: #CC6600;
+	line-height: 2em;
+}
+.alert{
+	background-color: #CC9900;
+	font-family: "Courier", san-serif;
+	font-size: 1.5em;
+	color: white;
+}

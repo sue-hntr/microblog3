@@ -1,0 +1,25 @@
+<% if flash[:notice] %>
+<div class="flash notice">
+	<span class=alert> 
+		<%= flash[:notice] %> 
+	</span>
+</div>
+<% end %>
+<h3>Login Here</h3>
+<br>
+<form action="/signin" method="POST">
+	<label>Your Name</label>
+	<input name="username" type="text"></input>
+	<br>
+	<br>
+	<label>Password</label>
+	<input name="password" type="password"></input>
+	<br>
+	<br>
+	<input type="submit" value="submit"></input>
+</form>
+<br>
+<br>
+<a href="signout.erb">SignOut</a>
+<br>
+
