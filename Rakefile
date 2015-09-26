@@ -1,4 +1,5 @@
 require 'sinatra/activerecord/rake'
+require 'sinatra/base'
 require 'action_dispatch'
 require 'logger'
 require './app.rb'

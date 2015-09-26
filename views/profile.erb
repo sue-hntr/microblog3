@@ -5,14 +5,13 @@
 <% end %>
 <h3>welcome back</h3>
 <br>
-<h3>@name </h3>
-<%= @name %>
+<h3>name </h3><%= @user.username %>
 <br>
-<h3>@session </h3>
-<%= @session %>
+<h3>created at </h3><%= @user.created_at %>
 <br>
-<h3>@name </h3><%= @name %>
 <br>
-<a href="signout.erb">SignOut</a>
+<%= current_user %>
+<br>
+<a href="signout">SignOut</a>
 <br>
 

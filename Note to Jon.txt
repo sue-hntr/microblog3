@@ -1,0 +1,9 @@
+Hi Jon
+Hopefully I don't disturb your fast and I can wish you a Happy New Year when you read this.
+I am at an impasse with the microblog again. My ruby language tags are not showing up on my views.
+In particular the "profiles.erb". Could you look at my code which I've pushed to GitHub
+at https://github.com/sue-hntr/microblog3 and tell me what to put to make the username show up.
+As you can see on the page, no options on the app.rb for profile show up.
+Stephanie advised @user.username (copy of message:Sue, I would advise: in the post action: @user = User.find(session[:user_id])
+erb :profile. I wouldn't name your path /user (singular) because it will conflict with the /users (plural) path and the :user (foreign key). Then in the erb file: <%= @user.username %> <br> <%= @user.password %>)
+
