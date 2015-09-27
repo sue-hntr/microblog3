@@ -1,10 +1,6 @@
-<% if flash[:notice] %>
-<div class="flash notice">
-	<span class=alert> 
-		<%= flash[:notice] %> 
-	</span>
-</div>
-<% end %>
+<!-- signup.erb -->
+<!-- body tag starts -->
+<div id="bbox">
 <h3>Sign Up to Gossip Here</h3>
 <br>
 <form action="/signup" method="POST">
@@ -18,8 +14,17 @@
 	<br>
 	<input type="submit" value="submit"></input>
 </form>
+</div><!-- close bbox (big box) -->
 <br>
-<br>
-<a href="signout">SignOut</a>
-<br>
+<span id="lbox">
+	<a href="/signin">
+		Log In
+	</a>
+</span>
 
+<div id="lbox">
+	<a href="/signout">
+		Sign Out
+	</a>
+</div>
+<br>

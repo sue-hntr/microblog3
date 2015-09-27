@@ -1,17 +1,25 @@
-<% if flash[:notice] %>
-<div class="flash notice">
-	<span class=alert> <%= flash[:notice] %> </span>
+<!-- profile.erb -->
+<!-- body tag starts -->
+<div id="bbox">
+	<h3>welcome back</h3>
+	<h3><%= "Name:   #{@user.username}" %></h3>
+	<h3><%= "Account created: #{@user.created_at}" %></h3>
+</div><!-- close bbox -->
+<br>
+<div id="lbox">
+	<a href="/makepost">
+		Spill it!
+	</a>
 </div>
-<% end %>
-<h3>welcome back</h3>
-<br>
-<h3>name </h3><%= @user.username %>
-<br>
-<h3>created at </h3><%= @user.created_at %>
-<br>
-<br>
-<%= current_user %>
-<br>
-<a href="signout">SignOut</a>
-<br>
+<div id="lbox">
+	<a href="/postlist">
+		Drama List
+	</a>
+</div>
+
+<div id="lbox">
+	<a href="/signout">
+		Sign Out
+	</a>
+</div>
 

@@ -61,10 +61,10 @@ post '/signin' do
 			redirect "/profile/#{@user.id}"
 		end
 	else
+		flash[:notice] = "Sorry, that name is not on the list. Feel free to sign up."
 		redirect "/signup"
-#		flash[:alert] = "Sorry, that user doesn't exist. Feel free to sign up."
+		end
 	end
-end
 
 
 get '/profile/:id' do
@@ -80,7 +80,7 @@ end
 
 
 get '/signout' do
-	@user = User.find(params[:id])
+#	@user = User.find(params[:id])
 	erb	:signout
 end
 
@@ -92,22 +92,59 @@ post '/signout' do
 end
 
 
+
+get '/signup/alert' do 
+	erb	:signup
+end
+
+
+post '/signup/alert' do 
+	flash[:notice] = "There was a problem with that."
+end
+
 get '/signup' do
 	erb	:signup
 end
 
 
 post '/signup' do
-	session[:user_id] = nil
-	user = params[:username]
-	if User.where(params[:username])
-		flash[:notice] = 'Sorry that username is taken. Choose another.'
-		redirect '/signup'
-	else
-		flash[:notice] = 'New gossiper accepted. Please Log In'
+	username = params[:username]
+	pass = params[:password]
+	@find = User.find_by_username(username)
+	if @find == nil
+		flash[:notice] = "New gossiper accepted. Please Log In"
 		@user = User.create(username: params[:username], password: params[:password])
-		redirect '/'
+		redirect '/signin'
+	else
+		flash[:notice] = "Username already taken. Try again."
+		redirect '/signup'
+	end
+end
+
+get '/postlist' do
+	@post = Post.all()
+	erb	:postlist
+end
+
+post '/postlist' do
+	@post = Post.all()
+end
+
+
+get '/makepost' do
+	session[:user_id]
+	erb	:makepost
+end
+
+post '/makepost' do
+	title = params[:title]
+	body = params[:body]
+	id = session[:user_id]
+	@post = Post.create(title: params[:title], body: params[:body], user_id: id)
+	flash[:notice] = "Thanks for the tip. Dish me some more..."
+	redirect '/makepost'
 	end
 
-		
-end
+
+
+

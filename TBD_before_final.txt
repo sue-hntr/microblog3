@@ -1,0 +1,7 @@
+tobe done for Sinatra Microblog
+
+change title to santa;s workshop
+for makepost and post list: figure out how to connect username with post listing.
+create a find_by_user?
+check to see if sessions is valid for both by testing username search with user_id
+need to create edit page

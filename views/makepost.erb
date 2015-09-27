@@ -1,0 +1,29 @@
+<!-- signup.erb -->
+<!-- body tag starts -->
+
+<div id="bbox">
+<h3>Share your gossip</h3>
+<form action="/makepost" method="POST">
+	<label>Title</label>
+	<input name="title" type="text"></input>
+	<br>
+	<br>
+	<label>Body</label>
+	<input name="body" type="text"></input>
+	<br>
+	<br>
+	<input type="submit" value="submit"></input>
+</form>
+</div><!-- close bbox (big box) -->
+<br>
+<div id="lbox">
+	<a href="/postlist">
+		Drama List
+	</a>
+</div>
+<div id="lbox">
+	<a href="/signout">
+		Sign Out
+	</a>
+</div>
+<br>

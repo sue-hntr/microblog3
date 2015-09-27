@@ -7,12 +7,22 @@
 	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-	<h1>gossip column</h1>
-	<h2>all the nonsense you WISH you never overheard</h2>
-	<br>
-	<br>
-
-	<%=yield%>
-
+	<div id="wrapper">
+		<h1>santa's bad list</h1>
+		<h2>all the xmas fluff you WISH you could forget</h2>
+		<hr align="left" width="75%">
+		<br>
+<% if flash[:notice] %>
+	<div class="flash notice">
+		<span class=alert> 
+			<%= flash[:notice] %> 
+		</span>
+	</div>
+<% end %>
+<!--********* HEADER ABOVE  ****************-->
+		<%=yield%>
+<!--********* CLOSING BELOW  ***************-->
+<br>
+</div> <!--close wrapper-->
 </body>
 </html>

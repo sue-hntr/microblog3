@@ -1,0 +1,28 @@
+<!-- postlist.erb -->
+<!-- body tag starts -->
+<h3>Drama List</h3>
+<table border="1" style="width:100%">
+   <tr>
+    <td>User id</td>
+    <td>Title</td>
+    <td>Body</td>
+  </tr>
+<% @post.each do |w| %>
+  <tr>
+  	<td><%= w.user_id %></td>
+    <td><%= w.title %></td>   
+    <td><%= w.body %></td>
+  </tr>
+ <%end%>
+</table>
+<div id="lbox">
+  <a href="/profile">
+    My Profile
+  </a>
+</div>
+
+<div id="lbox">
+  <a href="/signout">
+    Sign Out
+  </a>
+</div>

@@ -1,25 +1,30 @@
-<% if flash[:notice] %>
-<div class="flash notice">
-	<span class=alert> 
-		<%= flash[:notice] %> 
-	</span>
-</div>
-<% end %>
+<!-- signin.erb -->
+<!-- body tag starts -->
+<div id="bbox">
 <h3>Login Here</h3>
+	<form action="/signin" method="POST">
+		<label>Your Name</label>
+		<input name="username" type="text"></input>
+		<br>
+		<br>
+		<label>Password</label>
+		<input name="password" type="password"></input>
+		<br>
+		<br>
+		<input type="submit" value="submit"></input>
+	</form>
+</div><!-- close bbox (big box) -->
 <br>
-<form action="/signin" method="POST">
-	<label>Your Name</label>
-	<input name="username" type="text"></input>
-	<br>
-	<br>
-	<label>Password</label>
-	<input name="password" type="password"></input>
-	<br>
-	<br>
-	<input type="submit" value="submit"></input>
-</form>
-<br>
-<br>
-<a href="signout">SignOut</a>
+<div id="lbox">
+	<a href="/signup">
+		New Users Signup
+	</a>
+</div>
+
+<div id="lbox">
+	<a href="/signout">
+		Sign Out
+	</a>
+</div>
 <br>
 
